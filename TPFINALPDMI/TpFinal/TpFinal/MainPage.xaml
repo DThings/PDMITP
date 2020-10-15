@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TpFinal.MainPage"
+             Title="Mercadoria">
+
+    <StackLayout Margin="20, 20, 20, 20">
+        <StackLayout>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+
+                <Entry x:Name="txtId" Placeholder="Digite o Id"></Entry>
+                <Entry x:Name="txtNomeProduto" Placeholder="Digite o Produto"></Entry>
+                <Entry x:Name="txtPeso" Placeholder="Digite o Peso"></Entry>
+                <Entry x:Name="txtNomeProdutor" Placeholder="Digite o Produtor"></Entry>
+                <Entry x:Name="txtEmail" Placeholder="Digite o Email"></Entry>
+                <Entry x:Name="txtNCM" Placeholder="Digite o NCM"></Entry>
+                <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Button x:Name="btnAdd" WidthRequest="175" Text="Novo" Clicked="BtnAdd_Clicked" />
+                    <Button x:Name="btnRead" WidthRequest="175" Text="Ver" Clicked="BtnRead_Clicked" />
+                </StackLayout>
+                <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Button x:Name="btnUpdate" WidthRequest="175" Text="Atualizar" Clicked="BtnUpdate_Clicked"/>
+                    <Button x:Name="btnDelete" WidthRequest="175" Text="Apagar" Clicked="BtnDelete_Clicked" />
+                </StackLayout>
+                <StackLayout HorizontalOptions="Start" Orientation="Horizontal">
+                    <Label Text="Danilo Affonso" FontSize="Large">
+                    <Label Text="Fernanda Santos" FontSize="Large">
+                </StackLayout>
+                <ListView x:Name="lstPersons">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding NomeProduto}" Detail="{Binding PersonID}"></TextCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
